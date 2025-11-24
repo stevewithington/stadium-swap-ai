@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://127.0.0.1:3000', // Use explicit IP
+    baseURL: 'http://127.0.0.1:5173', // CHANGED: 3000 -> 5173
     trace: 'on-first-retry',
   },
   projects: [
@@ -19,11 +19,11 @@ export default defineConfig({
   ],
   webServer: {
     command: 'npm run dev',
-    url: 'http://127.0.0.1:3000', // Use explicit IP
+    url: 'http://127.0.0.1:5173', // CHANGED: 3000 -> 5173
     reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000, // Increase timeout to 120 seconds
+    timeout: 120 * 1000,
     env: {
-      GEMINI_API_KEY: 'dummy-key-for-testing'
-    }
+      GEMINI_API_KEY: 'dummy-key-for-testing',
+    },
   },
 });
