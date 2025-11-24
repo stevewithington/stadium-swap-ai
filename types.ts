@@ -25,6 +25,12 @@ export const SPORTS = [
   'Baseball',
   'Ice Hockey',
   'Tennis',
+  'Golf',
+  'Volleyball',
+  'Swimming',
+  'F1 Racing',
+  'Indy Racing',
+  'NASCAR',
   'Cricket',
   'Rugby',
   'Esports Arena'
